@@ -24,6 +24,6 @@ const user = {
     age: 23,
     job: true
 }
-// user.age = '20' // code editor error
-user.country = 'Bangladesh' //code editor error
+user.age = '20'; Note:'code editor error'
+user.country = 'Bangladesh'; Note:'code editor error'
 console.log(user);
