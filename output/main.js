@@ -12,3 +12,13 @@ arr.push({
     name: 'suvo'
 });
 console.log(arr);
+//type object
+const user = {
+    name: 'suvo',
+    profession: 'Developer',
+    age: 23,
+    job: true
+};
+// user.age = '20' // code editor error
+user.country = 'Bangladesh'; //code editor error
+console.log(user);
