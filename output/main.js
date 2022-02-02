@@ -57,3 +57,19 @@ myInfo = { name: 'suvo', code: 5, adult: true };
 let arrObj;
 arrObj = [1, 2];
 Note: 'not error because array is kind of object';
+// =============== dynamic type or union type ============
+let ab;
+ab = 5; //not error
+ab = "submit"; //not error
+/* array */
+let abArr = [];
+ab.push(1); //not error
+ab.push('suvo'); //not error
+/* object */
+let abObj;
+abObj = {
+    name: 10,
+    adult: 'true',
+    age: 'john doe'
+};
+Note: "When really need this type then use this otherwise not use this";
