@@ -27,3 +27,49 @@ const user = {
 user.age = '20'; Note:'code editor error'
 user.country = 'Bangladesh'; Note:'code editor error'
 console.log(user);
+
+let a: string; NOTE:"this is union type ex: let a: string"
+let aa: string | number; NOTE:"this is union type ex: let aa: string | number"
+
+a = 1; //error
+a = 'suvo';
+aa = 1; 
+aa = 'suvo';
+a = {name:'suvo'} //error 
+
+let b: number;
+b = 'suvo' //error
+b = 12
+
+
+//type array
+let arType : string[] = [];
+arType.push(2); //error
+arType.push('suvo');
+
+let arTypeTwo: (string | number)[] = [];
+arTypeTwo.push({ name: 'suvo' }); //error
+arTypeTwo.push('suvo');
+arTypeTwo.push(10);
+
+//type object
+
+let c: object;
+c = 'suvo'; //error
+c = { name: 'suvo' }
+
+// object match all property
+
+let myInfo : {
+    name: string,
+    code: number, 
+    adult:boolean
+}
+myInfo = { name: 'suvo', code: 5 }; //error not match all property
+myInfo = { name: 'suvo', code: 5, adult: 'true' };//error because adult not string
+myInfo = { name: 'suvo', code: 5, adult: true };
+
+// array is an object
+let arrObj: object;
+
+arrObj = [1, 2]; Note:'not error because array is kind of object'
