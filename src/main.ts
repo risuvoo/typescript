@@ -6,4 +6,12 @@ function checkNumber(a :number, b:number ) {
     return a * b;
     
 }
-console.log(checkNumber(2,2))
+console.log(checkNumber(2, 2))
+
+//type array
+
+const arr = ['suvo',1,{}];
+arr.push({
+    name:'suvo'
+});
+console.log(arr);
