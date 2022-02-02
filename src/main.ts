@@ -83,8 +83,8 @@ ab = "submit" //not error
 
 /* array */
 let abArr: any[]=[];
-ab.push(1); //not error
-ab.push('suvo'); //not error
+abArr.push(1); //not error
+abArr.push('suvo'); //not error
 
 /* object */
 let abObj: { 
@@ -99,8 +99,44 @@ abObj = {
     age:'john doe'
 }
 
+Note: "When really need this type then use this otherwise not use this"
 
-Note:"When really need this type then use this otherwise not use this"
+//================== function type =====================
 
+let myFunc: Function;
+
+myFunc = "john doe"; //error
+
+myFunc = () => {
+     console.log("john doe");
+}
+/* parametter func */
+const myPrFunc = (a:string, b:number) => {
+    console.log(`My name is ${a} and I am ${b} years old`);
+}
+myPrFunc('suvo', '23'); //error b is not a string
+myPrFunc('suvo', 23); 
+
+/* parametter func with optional parametter */
+const myPrFuncOp = (a: string, b: number, c?: string) => { //optional parametter ?:type
+    console.log(c) //output undefined
+    console.log(`My name is ${a} and I am ${b} years old`);
+} 
+myPrFuncOp('suvo', 23); //error b is not a string
+
+/* parametter func with default parametter*/
+const myPrFuncDf = (a: string, b: number, c: string ='john') => { //default parametter ?:type
+    console.log(c) //john
+    console.log(`My name is ${a} and I am ${b} years old`);
+}
+myPrFuncDf('suvo', 23); //error b is not a string
+
+/* parametter func with default parametter*/
+const myPrFuncRtrn = (a: string, b: number, c: string ='john') => { //default parametter ?:type
+    return a + b; //type string because a concat b result suvo23  and result is string
+}
+myPrFuncRtrn('suvo', 23); //error b is not a string
+
+Note:"Explicit structure: const myPrFuncRtrn = (a: string, b: number, c: string ='john') :string => {"
 
 
