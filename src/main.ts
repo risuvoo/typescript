@@ -137,6 +137,19 @@ const myPrFuncRtrn = (a: string, b: number, c: string ='john') => { //default pa
 }
 myPrFuncRtrn('suvo', 23); //error b is not a string
 
-Note:"Explicit structure: const myPrFuncRtrn = (a: string, b: number, c: string ='john') :string => {"
+Note: "Explicit structure: const myPrFuncRtrn = (a: string, b: number, c: string ='john') :string => {"
+
+
+//===================== type alias ===============
+
+type stringOrNum = string | number;
+type userType = { name: string, age: number };
+
+const userDetails = (id :stringOrNum,user : userType) => {
+    console.log(`user id : ${id}  and user name ${user.name}`)
+}
+const sayHello = (user:userType) => {
+    console.log(`hello ${user.name}`)
+}
 
 

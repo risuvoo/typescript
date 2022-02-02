@@ -103,3 +103,9 @@ const myPrFuncRtrn = (a, b, c = 'john') => {
 };
 myPrFuncRtrn('suvo', 23); //error b is not a string
 Note: "Explicit structure: const myPrFuncRtrn = (a: string, b: number, c: string ='john') :string => {";
+const userDetails = (id, user) => {
+    console.log(`user id : ${id}  and user name ${user.name}`);
+};
+const sayHello = (user) => {
+    console.log(`hello ${user.name}`);
+};
