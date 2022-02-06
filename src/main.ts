@@ -216,9 +216,16 @@ import {player} from "./classes/players.js"
 
 const sakib = new player('sakib', 23, 'bangladesh');
 
+//with module
+import {isPlayer} from "./interfaces/isPlayer.js"
+
+let masrafi: isPlayer;
+masrafi = new player('masrafi', 30, 'bangladesh');
+
 //assign player class as a array type
 
-const players: player[] = [];
+// const players: player[] = [];
+const players: isPlayer[] = [];
 players.push('suvo');//error because (this argument type) or (player class type) not equal
 players.push(sakib);
 
@@ -231,5 +238,24 @@ console.log(sakib.name);
 sakib.country = "us";
 console.log(sakib.country);
 
+
+
+//=====================typescript interface===============
+
+/***
+ * interface store a rules
+ */
+
+interface userInfo  {
+    name: string,
+    age:number,
+}
+
+function showUser(obj:userInfo) {
+    console.log(`user name is ${obj.name} and he is ${obj.age} years old`)
+}
+showUser({ name: 'suvo', age: 22, country: 'bangladesh' }); //error because country not allow in userInfo interface
+const getUser = {name:'suvo',age:22,country:'bangladesh'}
+showUser(getUser); // not error because getUser is reference type object
 
 

@@ -1,8 +1,8 @@
 export class player {
-    constructor(n, a, c) {
-        this.name = n;
-        this.age = a;
-        this.country = c;
+    constructor(name, age, country) {
+        this.name = name;
+        this.age = age;
+        this.country = country;
     }
     play() {
         console.log(`this player name is ${this.name} and he came from ${this.country} and he is ${this.age} years old`);
