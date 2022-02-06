@@ -152,4 +152,47 @@ const sayHello = (user:userType) => {
     console.log(`hello ${user.name}`)
 }
 
+//===============function signatures=====================
+ /********
+ 
+ syntex: let funcName :(param:number,param2:number)=> return type ex:void,number,etc;
+ 
+ ********/
+//ex:1
+let add: (x: number, y: number) => number;
+
+add = (a:number,b:number) => { //error because add return number not void
+    console.log(a + b);
+}
+add = (a:number,b:number) => { 
+    return a + b;
+}
+
+//ex:2
+
+let calculate: (x: number, y: number, z: string) => number;
+calculate = (a: number, b: number, c: string) => {
+    if (c === "add") {
+        return a + b;
+    } else {
+        //when not use return in else block then throw error calculate function becasue if condition false then function find return number type value
+        return a - b;
+    }  
+}
+
+//ex:3 pass object type in function
+
+let userInfo: (id: string | number, info: {
+    name: string,
+    age:number
+}) => void
+
+userInfo = (id: string | number, info: { //XXXXXXXXXX NOTE: object property same as function signature object property otherwise throw error
+    name: string,
+    age:number
+}) => {
+    console.log(info.name);
+}
+
+
 

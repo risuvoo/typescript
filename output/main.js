@@ -109,3 +109,33 @@ const userDetails = (id, user) => {
 const sayHello = (user) => {
     console.log(`hello ${user.name}`);
 };
+//===============function signatures=====================
+/********
+
+syntex: let funcName :(param:number,param2:number)=> return type ex:void,number,etc;
+
+********/
+//ex:1
+let add;
+add = (a, b) => {
+    console.log(a + b);
+};
+add = (a, b) => {
+    return a + b;
+};
+//ex:2
+let calculate;
+calculate = (a, b, c) => {
+    if (c === "add") {
+        return a + b;
+    }
+    else {
+        //when not use return in else block then throw error calculate function becasue if condition false then function find return number type value
+        return a - b;
+    }
+};
+//ex:3 pass object type in function
+let userInfo;
+userInfo = (id, info) => {
+    console.log(info.name);
+};
