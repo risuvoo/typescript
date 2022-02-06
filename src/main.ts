@@ -197,9 +197,9 @@ userInfo = (id: string | number, info: { //XXXXXXXXXX NOTE: object property same
 //===============Object class type=====================
 
 class player{
-    name: string;
-    age: number;
-    country: string;
+    private name: string;
+    public age: number;
+    readonly country: string;
     constructor(n: string, a: number, c: string) {
         this.name = n;
         this.age = a;
@@ -217,6 +217,14 @@ const players: player[] = [];
 players.push('suvo');//error because (this argument type) or (player class type) not equal
 players.push(sakib);
 
+//class access modifier
+/*****
+ * public,private,readonly (by default public)
+ */
+sakib.name = 'masrafi';
+console.log(sakib.name);
+sakib.country = "us";
+console.log(sakib.country);
 
 
 

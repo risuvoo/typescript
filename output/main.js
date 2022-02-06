@@ -155,3 +155,11 @@ const sakib = new player('sakib', 23, 'bangladesh');
 const players = [];
 players.push('suvo'); //error because (this argument type) or (player class type) not equal
 players.push(sakib);
+//class access modifier
+/*****
+ * public,private,readonly (by default public)
+ */
+sakib.name = 'masrafi';
+console.log(sakib.name);
+sakib.country = "us";
+console.log(sakib.country);
