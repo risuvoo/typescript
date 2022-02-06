@@ -1,4 +1,3 @@
-"use strict";
 const info = "frontend developer";
 console.log(info);
 //type number
@@ -140,16 +139,21 @@ userInfo = (id, info) => {
     console.log(info.name);
 };
 //===============Object class type=====================
-class player {
-    constructor(n, a, c) {
-        this.name = n;
-        this.age = a;
-        this.country = c;
-    }
-    play() {
-        console.log(`this player name is ${this.name} and he came from ${this.country} and he is ${this.age} years old`);
-    }
-}
+// class player{
+//     private name: string;
+//     public age: number;
+//     readonly country: string;
+//     constructor(n: string, a: number, c: string) {
+//         this.name = n;
+//         this.age = a;
+//         this.country=c
+//     }
+//     play() {
+//         console.log(`this player name is ${this.name} and he came from ${this.country} and he is ${this.age} years old`)
+//     }
+// }
+//import module
+import { player } from "./classes/players.js";
 const sakib = new player('sakib', 23, 'bangladesh');
 //assign player class as a array type
 const players = [];
