@@ -194,5 +194,29 @@ userInfo = (id: string | number, info: { //XXXXXXXXXX NOTE: object property same
     console.log(info.name);
 }
 
+//===============Object class type=====================
+
+class player{
+    name: string;
+    age: number;
+    country: string;
+    constructor(n: string, a: number, c: string) {
+        this.name = n;
+        this.age = a;
+        this.country=c
+    }
+    play() {
+        console.log(`this player name is ${this.name} and he came from ${this.country} and he is ${this.age} years old`)
+    }
+}
+const sakib = new player('sakib', 23, 'bangladesh');
+
+//assign player class as a array type
+
+const players: player[] = [];
+players.push('suvo');//error because (this argument type) or (player class type) not equal
+players.push(sakib);
+
+
 
 
