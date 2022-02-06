@@ -176,3 +176,62 @@ function showUser(obj) {
 showUser({ name: 'suvo', age: 22, country: 'bangladesh' }); //error because country not allow in userInfo interface
 const getUser = { name: 'suvo', age: 22, country: 'bangladesh' };
 showUser(getUser); // not error because getUser is reference type object
+//=====================typescript generics===============
+/****
+ * ===only accept oject with out suggestion===
+ * const addNew = (obj:object) => {
+    let id = Math.floor(Math.random() * 100);
+    return { ...obj, id };
+}
+ */
+/****
+ * ===only accept oject with  suggestion===
+ * const addNew =<T>(obj:T) => {
+    let id = Math.floor(Math.random() * 100);
+    return { ...obj, id };
+}
+ */
+/***
+ * const addNew =<T extends object>(obj:T) => {
+    let id = Math.floor(Math.random() * 100);
+    return { ...obj, id };
+}
+*output:
+* const userTwo = addNew('suvo'); //error because only except object
+*const userTwo = addNew({
+    name: 'suvo',
+    age:30
+})
+ */
+/***
+ * const addNew =<T extends {name:string,age:number}>(obj:T) => {
+    let id = Math.floor(Math.random() * 100);
+    return { ...obj, id };
+}
+*output:
+*const userTwo = addNew({ //error because property not match for this type object
+    country: 'bangladesh'
+})
+*const userTwo = addNew({
+    name: 'suvo',
+    age: 30,
+    country: 'bangladesh'
+})
+ */
+const addNew = (obj) => {
+    let id = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { id });
+};
+const userTwo = addNew({
+    name: 'suvo',
+    age: 30,
+    country: 'bangladesh'
+});
+const response = {
+    status: 200,
+    type: 'success',
+    data: {
+        name: 'suvo',
+        age: 30
+    }
+};
