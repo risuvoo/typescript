@@ -251,3 +251,4 @@ const response1 = {
     data: 'test'
 };
 console.log(response1);
+//=====================typescript tuples===============

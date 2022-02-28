@@ -356,6 +356,6 @@ const response1: APIresponse1<string> = {
     data: 'test'
 }
 console.log(response1)
-
+//=====================typescript tuples===============
 
 
