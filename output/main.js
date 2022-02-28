@@ -252,3 +252,15 @@ const response1 = {
 };
 console.log(response1);
 //=====================typescript tuples===============
+/**
+ * normal way
+ */
+let y = [3, 'string', { id: 1 }];
+y[1] = 3;
+y[1] = true; //error because typeScript asume his type is y object
+/**
+ * explacit way
+ */
+let g = ['suvo', { id: 1 }, true];
+g[1] = { name: 'suvo' };
+g[1] = true; //error because explicit need to correct sequence (g:[string, object, boolean])
