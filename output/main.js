@@ -235,3 +235,19 @@ const response = {
         age: 30
     }
 };
+//=====================typescript enum===============
+var rType;
+(function (rType) {
+    rType[rType["SUCCESS"] = 0] = "SUCCESS";
+    rType[rType["ERROR"] = 1] = "ERROR";
+    rType[rType["FAILURE"] = 2] = "FAILURE";
+    rType[rType["UNAUHENTICATED"] = 3] = "UNAUHENTICATED";
+    rType[rType["FORBIDDEN"] = 4] = "FORBIDDEN";
+})(rType || (rType = {}));
+;
+const response1 = {
+    status: 200,
+    type: rType.SUCCESS,
+    data: 'test'
+};
+console.log(response1);

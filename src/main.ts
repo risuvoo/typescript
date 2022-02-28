@@ -342,6 +342,20 @@ const response: APIresponse<object> = {
         age:30
     }
 }
+//=====================typescript enum===============
+enum rType { SUCCESS, ERROR, FAILURE, UNAUHENTICATED, FORBIDDEN };
+interface APIresponse1<T>{
+    status: number,
+    type: rType,
+    data:T
+}
+
+const response1: APIresponse1<string> = {
+    status: 200,
+    type: rType.SUCCESS,
+    data: 'test'
+}
+console.log(response1)
 
 
 
